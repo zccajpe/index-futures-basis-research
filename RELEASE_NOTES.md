@@ -4,7 +4,7 @@
 
 ## 下载
 
-- **完整包（推荐）**：[`index-futures-basis-research-v1.0.0.zip`](https://github.com/zccajpe/index-futures-basis-research/releases/download/v1.0.0/index-futures-basis-research-v1.0.0.zip)（2,016,114 字节，约 1.9 MB，56 个文件）
+- **完整包（推荐）**：[`index-futures-basis-research-v1.0.0.zip`](https://github.com/zccajpe/index-futures-basis-research/releases/download/v1.0.0/index-futures-basis-research-v1.0.0.zip)（2,016,114 字节，约 1.9 MB，57 个文件）
   解压后是一个同名目录，根下直接含 `SKILL.md`，复跑所需的研究代码在 `scripts/`。
   SHA256：`976534965a4bd8f22c725791834677500e4801b2710181cb4e6a15f4c003579c`
 - **仓库内同一份内容**：[`index-futures-basis-research/`](https://github.com/zccajpe/index-futures-basis-research/tree/v1.0.0/index-futures-basis-research)
