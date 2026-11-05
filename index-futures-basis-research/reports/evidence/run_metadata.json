@@ -1,0 +1,74 @@
+{
+  "package": "index-futures-basis-research",
+  "version": "1.0.0",
+  "evidence_source": "创作环境的一次真实运行（QuantStudio 平台，DeepSeek Flash max），样本截至 2026-11-04；本包不随附行情，复跑需自备输入。",
+  "sample": {
+    "IC": {
+      "first": "2016-01-04",
+      "last": "2026-11-04",
+      "n_days_full_window": 2630
+    },
+    "IM": {
+      "first": "2022-07-22",
+      "last": "2026-11-04",
+      "n_days_full_window": 1037
+    },
+    "common_window_start": "2022-07-22",
+    "cutoff": "2026-11-04"
+  },
+  "runs": {
+    "rows": 24,
+    "windows": [
+      "common",
+      "full"
+    ],
+    "products": [
+      "IC",
+      "IM"
+    ],
+    "schemes": [
+      "NEAR",
+      "NEARQ",
+      "FARQ",
+      "STAG",
+      "CARRY_M",
+      "CARRY_H"
+    ],
+    "cost_bp_per_leg": 2,
+    "capital_mode": "A",
+    "initial_capital": 3000000.0
+  },
+  "frozen_rules": {
+    "file": "rules/07_active_rules_frozen.md",
+    "sha256": "c31bd0825d4fbe6b1653a6718cc4a7bbd1262a276eabed9a37a459521e3d46d6"
+  },
+  "input_fingerprints": {
+    "tenor_map_daily.csv": {
+      "sha256": "60229595df3a1e8162ed49bb6a9d9eb57370799d919514e5441695588a89a227"
+    },
+    "spot_daily.parquet": {
+      "sha256": "7ffd45c891afbad6d7b619ae112524085b0f0edc79dc02906120eeb53b881284"
+    },
+    "contract_expiry_reconstructed.csv": {
+      "sha256": "f0a30d04f7663eb46143e518c6f96044df68bebd3725b84921f08ced7b314740"
+    },
+    "calendar_raw/sh_calendar.log.jsonl": {
+      "sha256": "57e83a63a53534485eb8e5cba6f7bd2ed04a9e512ab299053a6466562cf197b4"
+    }
+  },
+  "component_versions": {
+    "skill-strategy-tearsheet-report": "18c0f68769e423ce73d229fbacf4b3cc8e8c7c89",
+    "skill-backtesting-bias-avoidance": "affafd2537671e5df6a9a44a137d82a9c95504bf",
+    "skill-futures-roll-auditor": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8"
+  },
+  "engine_fixture_all_pass": true,
+  "checks": {
+    "groups_with_false_check": []
+  },
+  "not_included": [
+    "逐日净值/持仓/决策/腿明细（含历史价格）",
+    "原始行情与供应商响应",
+    "第三方组件源码",
+    "凭据与平台配置"
+  ]
+}

@@ -1,0 +1,19 @@
+usage: run_replay.py [-h] {selftest,panels,replay,figures,all} ...
+
+股指期货基差研究（index-futures-basis-research）发布包入口：自检、面板、24 组固定回放、静态图。不取数、不改规则。
+
+positional arguments:
+  {selftest,panels,replay,figures,all}
+    selftest            核算 fixture + 选约 fixture + 指标适配自检（只要 SH 交易日历，不要行情价格）
+    panels              由输入重建基差/前瞻/条件面板
+    replay              执行冻结的 24 组固定回放并写出统一比较表
+    figures             由本次回放结果生成静态图与合并 CSV
+    all                 panels → replay → figures 一次跑完
+
+options:
+  -h, --help            show this help message and exit
+
+示例：
+  python3 scripts/run_replay.py all --inputs /data/ic-im-inputs --out /runs/2026-11-04 --components <versions> --results <参照目录>
+输入字段见 references/data-inputs.md，限制见 reports/RESEARCH_REPORT.md。
+[help exit=0]

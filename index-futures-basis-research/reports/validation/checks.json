@@ -1,0 +1,798 @@
+{
+  "full_IC_NEAR": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 131,
+      "_sizing_carried_forward_legs": 260,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 2631,
+        "max_abs_equity_error": 1.862645149230957e-09,
+        "tolerance": 1e-06,
+        "reference": "full_IC_NEAR/daily.csv"
+      }
+    }
+  },
+  "full_IC_NEARQ": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 131,
+      "_sizing_carried_forward_legs": 86,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 2631,
+        "max_abs_equity_error": 1.862645149230957e-09,
+        "tolerance": 1e-06,
+        "reference": "full_IC_NEARQ/daily.csv"
+      }
+    }
+  },
+  "full_IC_FARQ": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 175,
+      "_sizing_carried_forward_legs": 0,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 2631,
+        "max_abs_equity_error": 9.313225746154785e-10,
+        "tolerance": 1e-06,
+        "reference": "full_IC_FARQ/daily.csv"
+      }
+    }
+  },
+  "full_IC_STAG": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 131,
+      "_sizing_carried_forward_legs": 258,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true,
+      "stag_three_steps_per_roll": true,
+      "stag_roll_dates_consecutive": true,
+      "stag_quantity_conserved": true,
+      "_stag_rolls_total": 43,
+      "_stag_rolls_completed": 43,
+      "_stag_rolls_mature": 43,
+      "_stag_immature_tail": 0
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 8.881784197001252e-16,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 2631,
+        "max_abs_equity_error": 1.862645149230957e-09,
+        "tolerance": 1e-06,
+        "reference": "full_IC_STAG/daily.csv"
+      }
+    }
+  },
+  "full_IC_CARRY_M": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 209,
+      "_sizing_carried_forward_legs": 122,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 2631,
+        "max_abs_equity_error": 1.862645149230957e-09,
+        "tolerance": 1e-06,
+        "reference": "full_IC_CARRY_M/daily.csv"
+      }
+    }
+  },
+  "full_IC_CARRY_H": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 163,
+      "_sizing_carried_forward_legs": 1132,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 2631,
+        "max_abs_equity_error": 1.862645149230957e-09,
+        "tolerance": 1e-06,
+        "reference": "full_IC_CARRY_H/daily.csv"
+      }
+    }
+  },
+  "full_IM_NEAR": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 102,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "full_IM_NEAR/daily.csv"
+      }
+    }
+  },
+  "full_IM_NEARQ": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 34,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "full_IM_NEARQ/daily.csv"
+      }
+    }
+  },
+  "full_IM_FARQ": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 70,
+      "_sizing_carried_forward_legs": 0,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "full_IM_FARQ/daily.csv"
+      }
+    }
+  },
+  "full_IM_STAG": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 102,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true,
+      "stag_three_steps_per_roll": true,
+      "stag_roll_dates_consecutive": true,
+      "stag_quantity_conserved": true,
+      "_stag_rolls_total": 17,
+      "_stag_rolls_completed": 17,
+      "_stag_rolls_mature": 17,
+      "_stag_immature_tail": 0
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 4.440892098500626e-16,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "full_IM_STAG/daily.csv"
+      }
+    }
+  },
+  "full_IM_CARRY_M": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 91,
+      "_sizing_carried_forward_legs": 40,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "full_IM_CARRY_M/daily.csv"
+      }
+    }
+  },
+  "full_IM_CARRY_H": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 64,
+      "_sizing_carried_forward_legs": 498,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "full_IM_CARRY_H/daily.csv"
+      }
+    }
+  },
+  "common_IC_NEAR": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 102,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IC_NEAR/daily.csv"
+      }
+    }
+  },
+  "common_IC_NEARQ": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 34,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IC_NEARQ/daily.csv"
+      }
+    }
+  },
+  "common_IC_FARQ": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 70,
+      "_sizing_carried_forward_legs": 0,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IC_FARQ/daily.csv"
+      }
+    }
+  },
+  "common_IC_STAG": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 102,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true,
+      "stag_three_steps_per_roll": true,
+      "stag_roll_dates_consecutive": true,
+      "stag_quantity_conserved": true,
+      "_stag_rolls_total": 17,
+      "_stag_rolls_completed": 17,
+      "_stag_rolls_mature": 17,
+      "_stag_immature_tail": 0
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 4.440892098500626e-16,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IC_STAG/daily.csv"
+      }
+    }
+  },
+  "common_IC_CARRY_M": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 84,
+      "_sizing_carried_forward_legs": 44,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IC_CARRY_M/daily.csv"
+      }
+    }
+  },
+  "common_IC_CARRY_H": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 63,
+      "_sizing_carried_forward_legs": 436,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IC_CARRY_H/daily.csv"
+      }
+    }
+  },
+  "common_IM_NEAR": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 102,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IM_NEAR/daily.csv"
+      }
+    }
+  },
+  "common_IM_NEARQ": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 34,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IM_NEARQ/daily.csv"
+      }
+    }
+  },
+  "common_IM_FARQ": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 70,
+      "_sizing_carried_forward_legs": 0,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IM_FARQ/daily.csv"
+      }
+    }
+  },
+  "common_IM_STAG": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 53,
+      "_sizing_carried_forward_legs": 102,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true,
+      "stag_three_steps_per_roll": true,
+      "stag_roll_dates_consecutive": true,
+      "stag_quantity_conserved": true,
+      "_stag_rolls_total": 17,
+      "_stag_rolls_completed": 17,
+      "_stag_rolls_mature": 17,
+      "_stag_immature_tail": 0
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 4.440892098500626e-16,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IM_STAG/daily.csv"
+      }
+    }
+  },
+  "common_IM_CARRY_M": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 91,
+      "_sizing_carried_forward_legs": 40,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IM_CARRY_M/daily.csv"
+      }
+    }
+  },
+  "common_IM_CARRY_H": {
+    "core": {
+      "equity_identity": true,
+      "decision_strictly_before_execution": true,
+      "beta_plus_basis_equals_pnl": true,
+      "cagr_consistent_with_final_equity": true,
+      "no_position_held_at_or_after_expiry": true,
+      "_held_into_expiry": null,
+      "legs_linked_to_saved_decisions": true,
+      "sizing_matches_saved_equity_and_spot": true,
+      "_sizing_checks_run": 64,
+      "_sizing_carried_forward_legs": 498,
+      "_sizing_max_abs_error": 0.0,
+      "no_leg_at_or_after_expiry": true,
+      "every_leg_charged": true
+    },
+    "added": {
+      "actual_positions_match_decisions": true,
+      "next_trading_day_execution": true,
+      "q_changes_only_at_capital_clock": true,
+      "q_max_abs_error": 0.0,
+      "real_futures_leg_prices": true,
+      "both_leg_cost_formula": true,
+      "long_only": true,
+      "reference_daily_regression": {
+        "compared_days": 1038,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "tolerance": 1e-06,
+        "reference": "common_IM_CARRY_H/daily.csv"
+      }
+    }
+  }
+}

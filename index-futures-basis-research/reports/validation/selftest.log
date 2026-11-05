@@ -1,0 +1,73 @@
+package version 1.0.0 | inputs=<工作区>/output/ic-im-basis-latest-deepseek-flash-max-20261105/artifacts | out=<工作区>/output/ic-im-basis-github-v1.0.0/verify/selftest-20261105T113507 | results=未提供（参照回归记为未运行） | skill-strategy-tearsheet-report=OK 18c0f68769e423ce73d229fbacf4b3cc8e8c7c89 | skill-backtesting-bias-avoidance=OK affafd2537671e5df6a9a44a137d82a9c95504bf | skill-futures-roll-auditor=OK 646f6a6fd0d49bd930c854c7b54e0a91d1d033b8
+=== step selftest ===
+{
+  "day1": {
+    "pnl_futures": 18000.0,
+    "expected_pnl": 18000.0,
+    "pnl_spot_equiv": 20000.0,
+    "expected_beta": 20000.0,
+    "pnl_basis": -2000.0,
+    "expected_basis": -2000.0,
+    "cost": 471.6,
+    "expected_cost": 471.6,
+    "equity_end": 1217528.4,
+    "expected_equity": 1217528.4,
+    "legs_traded": 2,
+    "expected_legs": 2,
+    "gap_points_recorded": 190.0,
+    "expected_gap": 190.0,
+    "pass": true
+  },
+  "gap_not_booked": {
+    "equity_gain": 17528.399999999907,
+    "pnl_minus_cost": 17528.4,
+    "gap_notional_if_booked": 38000.0,
+    "pass": true
+  },
+  "day2_flat": {
+    "pnl_futures": 0.0,
+    "cost": 0.0,
+    "equity_end": 1217528.4,
+    "pass": true
+  },
+  "interest_cash_only_fixture": {
+    "margin_locked": 141600.0,
+    "interest_actual": 210.0,
+    "expected_cash_only": 210.0,
+    "wrong_full_base": 238.0952380952381,
+    "pass": true,
+    "note": "Positive-rate fixture only. The study baseline itself is zero-interest."
+  },
+  "sizing_uses_spot": {
+    "q": 1.0,
+    "expected": 1.0,
+    "q_if_wrong_futures_denominator": 1.0169491525423728,
+    "pass": true
+  },
+  "resize_same_contract_once": {
+    "cost": 240.0,
+    "expected_cost": 240.0,
+    "legs": 1,
+    "expected_legs": 1,
+    "wrong_double_charge": 480.0,
+    "pass": true
+  },
+  "stagger_net_delta_once": {
+    "cost": 157.2,
+    "expected_cost": 157.20000000000002,
+    "legs": 2,
+    "expected_legs": 2,
+    "total_q_after": 1.0,
+    "expected_total_q": 1.0,
+    "wrong_double_charge": 237.06666666666666,
+    "pass": true
+  },
+  "decomposition": {
+    "pass": true
+  }
+}
+ALL PASS
+Active selector fixtures: 6 assertions PASS
+=== step selftest OK (0.4s) ===
+
+完成：selftest；运行记录 <工作区>/output/ic-im-basis-github-v1.0.0/verify/selftest-20261105T113507/run_log.json

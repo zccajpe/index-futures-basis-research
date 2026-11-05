@@ -1,0 +1,51 @@
+{
+  "rules_sha256": "c31bd0825d4fbe6b1653a6718cc4a7bbd1262a276eabed9a37a459521e3d46d6",
+  "runs": 24,
+  "schemes": [
+    "NEAR",
+    "NEARQ",
+    "FARQ",
+    "STAG",
+    "CARRY_M",
+    "CARRY_H"
+  ],
+  "trial_policy": "two frozen rules; no parameter scan; exploratory history, not clean OOS",
+  "prefix_causality": {
+    "IC_CARRY_M": {
+      "first_80_equity_max_error": 0.0
+    },
+    "IC_CARRY_H": {
+      "first_80_equity_max_error": 0.0
+    },
+    "IM_CARRY_M": {
+      "first_80_equity_max_error": 0.0
+    },
+    "IM_CARRY_H": {
+      "first_80_equity_max_error": 0.0
+    }
+  },
+  "reference_baseline": "<工作区>/output/ic-im-basis-latest-deepseek-flash-max-20261105/artifacts/active_research",
+  "reused_skills": [
+    "Tearsheet metrics via qs_metrics_adapter",
+    "Bias-Avoidance sharpe_stats/segment_stats",
+    "futures-roll-auditor analyze on actual active contracts"
+  ],
+  "component_versions": {
+    "skill-strategy-tearsheet-report": "18c0f68769e423ce73d229fbacf4b3cc8e8c7c89",
+    "skill-backtesting-bias-avoidance": "affafd2537671e5df6a9a44a137d82a9c95504bf",
+    "skill-futures-roll-auditor": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8"
+  },
+  "rules_file": "rules/07_active_rules_frozen.md",
+  "files": {
+    "06_engine.py": "7f033fa0d46907ee0c0ab0ed2e8bf747f63b3b16c55ef3fc7f9969fe70a79476",
+    "08_passive_baseline.py": "244e653c29f6156489d7d3b3e09db026aa30be4f9d58a453411c077be59f8987",
+    "16_active_rules.py": "1e5ec7a28edcaf7a44ee437d4c7e35ea2f84e50ff0ab2e5b668686b480df77cb",
+    "qs_metrics_adapter.py": "6a68f2326030cb305d062a5840e317c16933f29fc1c7dd44b07ebbd25717da0a"
+  },
+  "inputs": {
+    "tenor_map_daily.csv": "60229595df3a1e8162ed49bb6a9d9eb57370799d919514e5441695588a89a227",
+    "spot_daily.parquet": "7ffd45c891afbad6d7b619ae112524085b0f0edc79dc02906120eeb53b881284",
+    "contract_expiry_reconstructed.csv": "f0a30d04f7663eb46143e518c6f96044df68bebd3725b84921f08ced7b314740",
+    "calendar_raw/sh_calendar.log.jsonl": "57e83a63a53534485eb8e5cba6f7bd2ed04a9e512ab299053a6466562cf197b4"
+  }
+}

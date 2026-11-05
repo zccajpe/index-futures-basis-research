@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "comparison": {
+    "rows": 24,
+    "columns_compared": 59,
+    "max_abs_numeric_difference": 0.0,
+    "reference_only_columns_not_produced_by_packaged_code": [
+      "sample_first_date",
+      "sample_last_date"
+    ],
+    "tolerance": {
+      "rtol": 1e-12,
+      "atol": 1e-08
+    }
+  },
+  "checks": {
+    "groups": 24,
+    "evaluated_items": 396,
+    "false_items": [],
+    "not_run_items": []
+  },
+  "reference_daily_regression": {
+    "groups_compared": 24,
+    "groups_skipped": {},
+    "max_abs_equity_error": 1.862645149230957e-09,
+    "tolerance": 1e-06,
+    "compared_days": {
+      "full_IC_NEAR": 2631,
+      "full_IC_NEARQ": 2631,
+      "full_IC_FARQ": 2631,
+      "full_IC_STAG": 2631,
+      "full_IC_CARRY_M": 2631,
+      "full_IC_CARRY_H": 2631,
+      "full_IM_NEAR": 1038,
+      "full_IM_NEARQ": 1038,
+      "full_IM_FARQ": 1038,
+      "full_IM_STAG": 1038,
+      "full_IM_CARRY_M": 1038,
+      "full_IM_CARRY_H": 1038,
+      "common_IC_NEAR": 1038,
+      "common_IC_NEARQ": 1038,
+      "common_IC_FARQ": 1038,
+      "common_IC_STAG": 1038,
+      "common_IC_CARRY_M": 1038,
+      "common_IC_CARRY_H": 1038,
+      "common_IM_NEAR": 1038,
+      "common_IM_NEARQ": 1038,
+      "common_IM_FARQ": 1038,
+      "common_IM_STAG": 1038,
+      "common_IM_CARRY_M": 1038,
+      "common_IM_CARRY_H": 1038
+    }
+  },
+  "roll_audit": {
+    "groups": 8,
+    "all_passed": true,
+    "warning_ids": [
+      "roll-rule-evidence-missing",
+      "unadjusted-roll-gap"
+    ],
+    "roll_counts": {
+      "full_IC_CARRY_M": 139,
+      "full_IC_CARRY_H": 598,
+      "full_IM_CARRY_M": 58,
+      "full_IM_CARRY_H": 260,
+      "common_IC_CARRY_M": 53,
+      "common_IC_CARRY_H": 228,
+      "common_IM_CARRY_M": 58,
+      "common_IM_CARRY_H": 260
+    }
+  }
+}
+CROSS CHECK PASSED

@@ -1,0 +1,42 @@
+{
+  "rules_sha256": "c31bd0825d4fbe6b1653a6718cc4a7bbd1262a276eabed9a37a459521e3d46d6",
+  "runs": 24,
+  "schemes": [
+    "NEAR",
+    "NEARQ",
+    "FARQ",
+    "STAG",
+    "CARRY_M",
+    "CARRY_H"
+  ],
+  "trial_policy": "two frozen rules; no parameter scan; exploratory history, not clean OOS",
+  "prefix_causality": {
+    "IC_CARRY_M": {
+      "first_80_equity_max_error": 0.0
+    },
+    "IC_CARRY_H": {
+      "first_80_equity_max_error": 0.0
+    },
+    "IM_CARRY_M": {
+      "first_80_equity_max_error": 0.0
+    },
+    "IM_CARRY_H": {
+      "first_80_equity_max_error": 0.0
+    }
+  },
+  "reused_skills": [
+    "Tearsheet metrics via qs_metrics_adapter",
+    "Bias-Avoidance sharpe_stats/segment_stats",
+    "futures-roll-auditor analyze on actual active contracts"
+  ],
+  "files": {
+    "07_active_rules_frozen.md": "c31bd0825d4fbe6b1653a6718cc4a7bbd1262a276eabed9a37a459521e3d46d6",
+    "code/06_engine.py": "7f033fa0d46907ee0c0ab0ed2e8bf747f63b3b16c55ef3fc7f9969fe70a79476",
+    "code/08_passive_baseline.py": "26f5bfc0aa9e618154dd865734e646f7adb63f68ac4a7b0a931a78201a9bb150",
+    "code/16_active_rules.py": "b9a18b31a7a7bf89ebccc28651220ab0a4c79eb6accc5fd6eac84123dbd4af87",
+    "artifacts/tenor_map_daily.csv": "706d1e1b98edf26bb7cc3c88b4c9f687c58284ee4a409a3964808971c83571ca",
+    "artifacts/spot_daily.parquet": "8fb798b8734283f2f5fdb5cf5099cccc231d31c99baff80a4b3f8642308ace97",
+    "artifacts/contract_expiry_reconstructed.csv": "f0a30d04f7663eb46143e518c6f96044df68bebd3725b84921f08ced7b314740",
+    "artifacts/calendar_raw/sh_calendar.log.jsonl": "57e83a63a53534485eb8e5cba6f7bd2ed04a9e512ab299053a6466562cf197b4"
+  }
+}

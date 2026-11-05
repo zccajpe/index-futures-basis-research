@@ -1,0 +1,137 @@
+{
+  "run_dir": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/replay-20261105T113510",
+  "reference": "<工作区>/output/ic-im-basis-latest-deepseek-flash-max-20261105/artifacts/active_research",
+  "status": "passed",
+  "run_status": "completed",
+  "completed_steps": [
+    "panels",
+    "replay",
+    "figures"
+  ],
+  "package_version": "1.0.0",
+  "python": "3.12.10",
+  "component_versions": {
+    "skill-strategy-tearsheet-report": "18c0f68769e423ce73d229fbacf4b3cc8e8c7c89",
+    "skill-backtesting-bias-avoidance": "affafd2537671e5df6a9a44a137d82a9c95504bf",
+    "skill-futures-roll-auditor": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8"
+  },
+  "module_sources": {
+    "13_basis_panel": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/13_basis_panel.py",
+    "14_forward_outcomes": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/14_forward_outcomes.py",
+    "15_conditional": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/15_conditional.py",
+    "06_engine": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/06_engine.py",
+    "08_passive_baseline": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/08_passive_baseline.py",
+    "16_active_rules": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/16_active_rules.py",
+    "17_active_comparison": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/17_active_comparison.py",
+    "qs_metrics_adapter": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/qs_metrics_adapter.py",
+    "metrics": "<QuantStudio home>/quantskills/versions/skill-strategy-tearsheet-report/18c0f68769e423ce73d229fbacf4b3cc8e8c7c89/source/scripts/metrics.py",
+    "run_backtest": "<QuantStudio home>/quantskills/versions/skill-backtesting-bias-avoidance/affafd2537671e5df6a9a44a137d82a9c95504bf/source/scripts/run_backtest.py",
+    "audit_rolls": "<QuantStudio home>/quantskills/versions/skill-futures-roll-auditor/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/source/scripts/audit_rolls.py",
+    "18_active_report": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/18_active_report.py"
+  },
+  "modules_outside_package": {},
+  "modules_from_authoring_study": {},
+  "comparison": {
+    "rows": 24,
+    "columns_compared": 59,
+    "max_abs_numeric_difference": 0.0,
+    "reference_only_columns_not_produced_by_packaged_code": [
+      "sample_first_date",
+      "sample_last_date"
+    ],
+    "tolerance": {
+      "rtol": 1e-12,
+      "atol": 1e-08
+    }
+  },
+  "checks": {
+    "groups": 24,
+    "evaluated_items": 396,
+    "false_items": [],
+    "not_run_items": []
+  },
+  "reference_daily_regression": {
+    "groups_compared": 24,
+    "groups_skipped": {},
+    "max_abs_equity_error": 1.862645149230957e-09,
+    "tolerance": 1e-06,
+    "compared_days": {
+      "full_IC_NEAR": 2631,
+      "full_IC_NEARQ": 2631,
+      "full_IC_FARQ": 2631,
+      "full_IC_STAG": 2631,
+      "full_IC_CARRY_M": 2631,
+      "full_IC_CARRY_H": 2631,
+      "full_IM_NEAR": 1038,
+      "full_IM_NEARQ": 1038,
+      "full_IM_FARQ": 1038,
+      "full_IM_STAG": 1038,
+      "full_IM_CARRY_M": 1038,
+      "full_IM_CARRY_H": 1038,
+      "common_IC_NEAR": 1038,
+      "common_IC_NEARQ": 1038,
+      "common_IC_FARQ": 1038,
+      "common_IC_STAG": 1038,
+      "common_IC_CARRY_M": 1038,
+      "common_IC_CARRY_H": 1038,
+      "common_IM_NEAR": 1038,
+      "common_IM_NEARQ": 1038,
+      "common_IM_FARQ": 1038,
+      "common_IM_STAG": 1038,
+      "common_IM_CARRY_M": 1038,
+      "common_IM_CARRY_H": 1038
+    }
+  },
+  "provenance": {
+    "runs": 24,
+    "rules_sha256": "c31bd0825d4fbe6b1653a6718cc4a7bbd1262a276eabed9a37a459521e3d46d6",
+    "rules_file_matches_package": true,
+    "prefix_causality": {
+      "IC_CARRY_M": {
+        "first_80_equity_max_error": 0.0
+      },
+      "IC_CARRY_H": {
+        "first_80_equity_max_error": 0.0
+      },
+      "IM_CARRY_M": {
+        "first_80_equity_max_error": 0.0
+      },
+      "IM_CARRY_H": {
+        "first_80_equity_max_error": 0.0
+      }
+    },
+    "component_versions": {
+      "skill-strategy-tearsheet-report": "18c0f68769e423ce73d229fbacf4b3cc8e8c7c89",
+      "skill-backtesting-bias-avoidance": "affafd2537671e5df6a9a44a137d82a9c95504bf",
+      "skill-futures-roll-auditor": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8"
+    },
+    "inputs_hashed": [
+      "calendar_raw/sh_calendar.log.jsonl",
+      "contract_expiry_reconstructed.csv",
+      "spot_daily.parquet",
+      "tenor_map_daily.csv"
+    ]
+  },
+  "roll_audit": {
+    "groups": 8,
+    "all_passed": true,
+    "warning_ids": [
+      "roll-rule-evidence-missing",
+      "unadjusted-roll-gap"
+    ],
+    "roll_counts": {
+      "full_IC_CARRY_M": 139,
+      "full_IC_CARRY_H": 598,
+      "full_IM_CARRY_M": 58,
+      "full_IM_CARRY_H": 260,
+      "common_IC_CARRY_M": 53,
+      "common_IC_CARRY_H": 228,
+      "common_IM_CARRY_M": 58,
+      "common_IM_CARRY_H": 260
+    }
+  },
+  "figures": {
+    "active_all_schemes_log_nav.png": 814854,
+    "basis_observations.png": 139640
+  }
+}

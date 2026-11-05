@@ -1,0 +1,92 @@
+{
+  "package_version": "1.0.0",
+  "entry": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/run_replay.py",
+  "python": "/opt/homebrew/opt/python@3.12/bin/python3.12",
+  "python_version": "3.12.10",
+  "argv": [
+    "all",
+    "--inputs",
+    "<工作区>/output/ic-im-basis-latest-deepseek-flash-max-20261105/artifacts",
+    "--out",
+    "<工作区>/output/ic-im-basis-github-v1.0.0/verify/replay-20261105T113510",
+    "--components",
+    "<QuantStudio home>/quantskills/versions",
+    "--results",
+    "<工作区>/output/ic-im-basis-latest-deepseek-flash-max-20261105/artifacts/active_research"
+  ],
+  "started": "2026-11-05T11:35:10",
+  "resolved": {
+    "package_root": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research",
+    "out_dir": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/replay-20261105T113510",
+    "rules_file": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/rules/07_active_rules_frozen.md",
+    "components": {
+      "skill-strategy-tearsheet-report": {
+        "resolved": true,
+        "scripts_dir": "<QuantStudio home>/quantskills/versions/skill-strategy-tearsheet-report/18c0f68769e423ce73d229fbacf4b3cc8e8c7c89/source/scripts",
+        "version": "18c0f68769e423ce73d229fbacf4b3cc8e8c7c89",
+        "script": "metrics.py"
+      },
+      "skill-backtesting-bias-avoidance": {
+        "resolved": true,
+        "scripts_dir": "<QuantStudio home>/quantskills/versions/skill-backtesting-bias-avoidance/affafd2537671e5df6a9a44a137d82a9c95504bf/source/scripts",
+        "version": "affafd2537671e5df6a9a44a137d82a9c95504bf",
+        "script": "run_backtest.py"
+      },
+      "skill-futures-roll-auditor": {
+        "resolved": true,
+        "scripts_dir": "<QuantStudio home>/quantskills/versions/skill-futures-roll-auditor/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/source/scripts",
+        "version": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+        "script": "audit_rolls.py"
+      }
+    },
+    "inputs_dir": "<工作区>/output/ic-im-basis-latest-deepseek-flash-max-20261105/artifacts",
+    "results_dir": "<工作区>/output/ic-im-basis-latest-deepseek-flash-max-20261105/artifacts/active_research"
+  },
+  "status": "completed",
+  "stage": "panels",
+  "panels": {
+    "13_basis_panel": {
+      "seconds": 0.4
+    },
+    "14_forward_outcomes": {
+      "seconds": 0.2
+    },
+    "15_conditional": {
+      "seconds": 0.4
+    },
+    "produced_parquet": [
+      "basis_panel.parquet",
+      "conditional_panel.parquet",
+      "forward_outcomes.parquet",
+      "term_structure_daily.parquet"
+    ]
+  },
+  "completed_steps": [
+    "panels",
+    "replay",
+    "figures"
+  ],
+  "module_sources": {
+    "13_basis_panel": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/13_basis_panel.py",
+    "14_forward_outcomes": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/14_forward_outcomes.py",
+    "15_conditional": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/15_conditional.py",
+    "06_engine": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/06_engine.py",
+    "08_passive_baseline": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/08_passive_baseline.py",
+    "16_active_rules": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/16_active_rules.py",
+    "17_active_comparison": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/17_active_comparison.py",
+    "qs_metrics_adapter": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/qs_metrics_adapter.py",
+    "metrics": "<QuantStudio home>/quantskills/versions/skill-strategy-tearsheet-report/18c0f68769e423ce73d229fbacf4b3cc8e8c7c89/source/scripts/metrics.py",
+    "run_backtest": "<QuantStudio home>/quantskills/versions/skill-backtesting-bias-avoidance/affafd2537671e5df6a9a44a137d82a9c95504bf/source/scripts/run_backtest.py",
+    "audit_rolls": "<QuantStudio home>/quantskills/versions/skill-futures-roll-auditor/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/source/scripts/audit_rolls.py",
+    "18_active_report": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/unzipped/index-futures-basis-research/scripts/18_active_report.py"
+  },
+  "replay": {
+    "seconds": 31.2,
+    "comparison_csv": "<工作区>/output/ic-im-basis-github-v1.0.0/verify/replay-20261105T113510/active_research/comparison.csv"
+  },
+  "figures": {
+    "active_all_schemes_log_nav.png": 814854,
+    "basis_observations.png": 139640
+  },
+  "finished": "2026-11-05T11:35:54"
+}

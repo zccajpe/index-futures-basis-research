@@ -1,0 +1,64 @@
+{
+  "status": "execution_checks_passed",
+  "scope": "original_environment_ic_im_fixed_replay",
+  "study": "<工作区>/output/ic-im-basis-management-study",
+  "output": "<工作区>/output/ic-im-basis-skill-verification/20261105T102248-native-b3043a5f",
+  "python": "/opt/homebrew/opt/python@3.12/bin/python3.12",
+  "authoring_or_help_is_not_validation": true,
+  "stage": "completed",
+  "original_file_hashes": {
+    "code/06_engine.py": "7f033fa0d46907ee0c0ab0ed2e8bf747f63b3b16c55ef3fc7f9969fe70a79476",
+    "code/07_engine_fixture_test.py": "2ac60007e872115a0d93a9bbc6c7d0c6557013b132ccf869e7219908c7f0d948",
+    "code/08_passive_baseline.py": "26f5bfc0aa9e618154dd865734e646f7adb63f68ac4a7b0a931a78201a9bb150",
+    "code/16_active_rules.py": "b9a18b31a7a7bf89ebccc28651220ab0a4c79eb6accc5fd6eac84123dbd4af87",
+    "code/17_active_comparison.py": "450b78a6c58628db84a798ae1bf9defc0d4360dc42018f387ee9f16128049398",
+    "code/18_active_report.py": "2fecfaeb84e632fb30b8fbbc6d13891c536c9818535a093761e47b1d07b4ab5e",
+    "code/qs_metrics_adapter.py": "3e7d4da3b3dd77831e8a9514b15b764c6240439d082c530332d3461aa64a66c1",
+    "artifacts/tenor_map_daily.csv": "706d1e1b98edf26bb7cc3c88b4c9f687c58284ee4a409a3964808971c83571ca",
+    "artifacts/contract_expiry_reconstructed.csv": "f0a30d04f7663eb46143e518c6f96044df68bebd3725b84921f08ced7b314740",
+    "artifacts/spot_daily.parquet": "8fb798b8734283f2f5fdb5cf5099cccc231d31c99baff80a4b3f8642308ace97",
+    "artifacts/calendar_raw/sh_calendar.log.jsonl": "57e83a63a53534485eb8e5cba6f7bd2ed04a9e512ab299053a6466562cf197b4",
+    "artifacts/basis_panel.parquet": "3de301e12ce833e9364b5b3e1afa559cc0636f2a1de36a0e9fa9bd7579608274",
+    "artifacts/forward_outcomes.parquet": "c757e92a45488450397508abf2bec8a3bb5ee382e4bee4d9ccae2576a86e5825",
+    "artifacts/passive_baseline_results.csv": "367973061dd94d1031db74c9a5f2bd56cf3e2d623e3c89efd6d26b65d2af6fdf",
+    "artifacts/active_research/provenance.json": "d938c7ebb0c19ec3670dc2b2b30303b00e9be07f59654120d986ffb94cc23b32",
+    "artifacts/active_research/comparison.csv": "a2563cb0afa4bd4a71161b836ef6abe27ad26112ef46e9a76522928e5747dd4d",
+    "artifacts/active_research/decisions_all.csv": "f87f3f309b9075520dcf3cbf6c357c2dafa92755c006dd0e203e84d5f5f48f2d",
+    "artifacts/active_research/ledger_all.csv": "458d8e9a243ab3a255f7e5b4909cb7ca6701da34e9fef11c3a03c3158c06837e",
+    "artifacts/daily/IC_NEAR_A_2bp.csv": "83b4891bf5eb5ccda6c7c56a2975572d4976e3786904e75030bb300488e91e69",
+    "artifacts/daily/IC_NEARQ_A_2bp.csv": "015900983c1bde76ad3e1bb2418e3b335bd46a95826cdcf2f279c6fc3be4b417",
+    "artifacts/daily/IC_FARQ_A_2bp.csv": "978a91a67a798240df0e8fb61a2b9bd3880f0ad004e25eeb9b5246a2a3abd7c6",
+    "artifacts/daily/IC_STAG_A_2bp.csv": "5f9876a922e5500f1c7125665a0aa4f86f5dbf14b604a89bdc41f164a1c5a9d8",
+    "artifacts/daily/IM_NEAR_A_2bp.csv": "71e6337fc2c395c0f2bf335b669d27a4cab705cdcbad17b0c7c1cdddd9c7761b",
+    "artifacts/daily/IM_NEARQ_A_2bp.csv": "50d2396b70e35479218bf3d1a40798fd24feba69adb8105213f49e442979d4fc",
+    "artifacts/daily/IM_FARQ_A_2bp.csv": "e793d716ed971aa6ab942540ca8f81851daea2ed4aa90182ad1665e64277197d",
+    "artifacts/daily/IM_STAG_A_2bp.csv": "a4d43bb1b4d8b90b5139afffa201878a5abec88ee6c06bce9a448cb175125c91",
+    "07_active_rules_frozen.md": "c31bd0825d4fbe6b1653a6718cc4a7bbd1262a276eabed9a37a459521e3d46d6",
+    "ACTIVE_RESEARCH_REPORT.md": "c79674495f137ddd34cf719fd657d6d10bcb0cef5437426a5abd35fd5e943cd5",
+    "RERUN_ACTIVE.md": "706f1cf1d02c54d215dc485ea30ad6505bbefd27ab8b40709dc36c4a11e2c7eb"
+  },
+  "component_bindings": {
+    "skill-strategy-tearsheet-report": "<QuantStudio home>/quantskills/versions/skill-strategy-tearsheet-report/18c0f68769e423ce73d229fbacf4b3cc8e8c7c89/source/scripts/metrics.py",
+    "skill-backtesting-bias-avoidance": "<QuantStudio home>/quantskills/versions/skill-backtesting-bias-avoidance/affafd2537671e5df6a9a44a137d82a9c95504bf/source/scripts/run_backtest.py",
+    "skill-futures-roll-auditor": "<QuantStudio home>/quantskills/versions/skill-futures-roll-auditor/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/source/scripts/audit_rolls.py"
+  },
+  "selector_fixture_completed": true,
+  "accounting_fixture_completed": true,
+  "fixed_replay_completed": true,
+  "runs": 24,
+  "comparison_matches_saved": true,
+  "comparison_tolerance": {
+    "rtol": 1e-12,
+    "atol": 1e-08
+  },
+  "consolidated_rows": {
+    "decisions_all.csv": 3804,
+    "ledger_all.csv": 6212
+  },
+  "monitored_original_files_unchanged": true,
+  "limitations": [
+    "Original environment/data only; not independent OOS or PIT proof",
+    "Roll warnings and untested branches remain; inspect original audit JSON",
+    "Invoking agent must separately record installed Skill identity and write VERIFICATION_REPORT.md"
+  ]
+}

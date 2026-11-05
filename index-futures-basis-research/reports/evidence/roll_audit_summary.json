@@ -1,0 +1,262 @@
+{
+  "note": "从完整审计 JSON 抽取的摘要：只保留通过状态、换月次数、检查发现与告警；逐笔换月事件及其新旧合约价格不随包分发。",
+  "adjustment_method": "none",
+  "groups": {
+    "full_IC_CARRY_M": {
+      "passed": true,
+      "roll_count": 139,
+      "rows": 2630,
+      "findings": [],
+      "warnings": [
+        {
+          "id": "unadjusted-roll-gap",
+          "severity": "medium",
+          "impact": "Naively stitched prices contain non-tradable jumps at contract changes."
+        },
+        {
+          "id": "roll-rule-evidence-missing",
+          "severity": "low",
+          "impact": "The selected-contract sequence can be checked structurally, but not proven to follow a volume/open-interest rule."
+        }
+      ],
+      "assumptions": {
+        "adjustment_method": "none",
+        "roll_event_definition": "selected contract changes between adjacent dates",
+        "price_alignment": "both old and new contracts are priced on the new selection date"
+      },
+      "limitations": [
+        "The script does not infer a roll rule from prices alone.",
+        "Difference/ratio factors describe research-series adjustment; tradable PnL must use contract-level returns and execution costs.",
+        "Expiry, notice-day and liquidity eligibility require additional contract metadata."
+      ],
+      "next_actions": [
+        "Confirm each event against the declared roll rule and decision timestamp.",
+        "Apply the chosen adjustment method to a copy of the series and keep this ledger for reproducibility."
+      ]
+    },
+    "full_IC_CARRY_H": {
+      "passed": true,
+      "roll_count": 598,
+      "rows": 2630,
+      "findings": [],
+      "warnings": [
+        {
+          "id": "unadjusted-roll-gap",
+          "severity": "medium",
+          "impact": "Naively stitched prices contain non-tradable jumps at contract changes."
+        },
+        {
+          "id": "roll-rule-evidence-missing",
+          "severity": "low",
+          "impact": "The selected-contract sequence can be checked structurally, but not proven to follow a volume/open-interest rule."
+        }
+      ],
+      "assumptions": {
+        "adjustment_method": "none",
+        "roll_event_definition": "selected contract changes between adjacent dates",
+        "price_alignment": "both old and new contracts are priced on the new selection date"
+      },
+      "limitations": [
+        "The script does not infer a roll rule from prices alone.",
+        "Difference/ratio factors describe research-series adjustment; tradable PnL must use contract-level returns and execution costs.",
+        "Expiry, notice-day and liquidity eligibility require additional contract metadata."
+      ],
+      "next_actions": [
+        "Confirm each event against the declared roll rule and decision timestamp.",
+        "Apply the chosen adjustment method to a copy of the series and keep this ledger for reproducibility."
+      ]
+    },
+    "full_IM_CARRY_M": {
+      "passed": true,
+      "roll_count": 58,
+      "rows": 1037,
+      "findings": [],
+      "warnings": [
+        {
+          "id": "unadjusted-roll-gap",
+          "severity": "medium",
+          "impact": "Naively stitched prices contain non-tradable jumps at contract changes."
+        },
+        {
+          "id": "roll-rule-evidence-missing",
+          "severity": "low",
+          "impact": "The selected-contract sequence can be checked structurally, but not proven to follow a volume/open-interest rule."
+        }
+      ],
+      "assumptions": {
+        "adjustment_method": "none",
+        "roll_event_definition": "selected contract changes between adjacent dates",
+        "price_alignment": "both old and new contracts are priced on the new selection date"
+      },
+      "limitations": [
+        "The script does not infer a roll rule from prices alone.",
+        "Difference/ratio factors describe research-series adjustment; tradable PnL must use contract-level returns and execution costs.",
+        "Expiry, notice-day and liquidity eligibility require additional contract metadata."
+      ],
+      "next_actions": [
+        "Confirm each event against the declared roll rule and decision timestamp.",
+        "Apply the chosen adjustment method to a copy of the series and keep this ledger for reproducibility."
+      ]
+    },
+    "full_IM_CARRY_H": {
+      "passed": true,
+      "roll_count": 260,
+      "rows": 1037,
+      "findings": [],
+      "warnings": [
+        {
+          "id": "unadjusted-roll-gap",
+          "severity": "medium",
+          "impact": "Naively stitched prices contain non-tradable jumps at contract changes."
+        },
+        {
+          "id": "roll-rule-evidence-missing",
+          "severity": "low",
+          "impact": "The selected-contract sequence can be checked structurally, but not proven to follow a volume/open-interest rule."
+        }
+      ],
+      "assumptions": {
+        "adjustment_method": "none",
+        "roll_event_definition": "selected contract changes between adjacent dates",
+        "price_alignment": "both old and new contracts are priced on the new selection date"
+      },
+      "limitations": [
+        "The script does not infer a roll rule from prices alone.",
+        "Difference/ratio factors describe research-series adjustment; tradable PnL must use contract-level returns and execution costs.",
+        "Expiry, notice-day and liquidity eligibility require additional contract metadata."
+      ],
+      "next_actions": [
+        "Confirm each event against the declared roll rule and decision timestamp.",
+        "Apply the chosen adjustment method to a copy of the series and keep this ledger for reproducibility."
+      ]
+    },
+    "common_IC_CARRY_M": {
+      "passed": true,
+      "roll_count": 53,
+      "rows": 1037,
+      "findings": [],
+      "warnings": [
+        {
+          "id": "unadjusted-roll-gap",
+          "severity": "medium",
+          "impact": "Naively stitched prices contain non-tradable jumps at contract changes."
+        },
+        {
+          "id": "roll-rule-evidence-missing",
+          "severity": "low",
+          "impact": "The selected-contract sequence can be checked structurally, but not proven to follow a volume/open-interest rule."
+        }
+      ],
+      "assumptions": {
+        "adjustment_method": "none",
+        "roll_event_definition": "selected contract changes between adjacent dates",
+        "price_alignment": "both old and new contracts are priced on the new selection date"
+      },
+      "limitations": [
+        "The script does not infer a roll rule from prices alone.",
+        "Difference/ratio factors describe research-series adjustment; tradable PnL must use contract-level returns and execution costs.",
+        "Expiry, notice-day and liquidity eligibility require additional contract metadata."
+      ],
+      "next_actions": [
+        "Confirm each event against the declared roll rule and decision timestamp.",
+        "Apply the chosen adjustment method to a copy of the series and keep this ledger for reproducibility."
+      ]
+    },
+    "common_IC_CARRY_H": {
+      "passed": true,
+      "roll_count": 228,
+      "rows": 1037,
+      "findings": [],
+      "warnings": [
+        {
+          "id": "unadjusted-roll-gap",
+          "severity": "medium",
+          "impact": "Naively stitched prices contain non-tradable jumps at contract changes."
+        },
+        {
+          "id": "roll-rule-evidence-missing",
+          "severity": "low",
+          "impact": "The selected-contract sequence can be checked structurally, but not proven to follow a volume/open-interest rule."
+        }
+      ],
+      "assumptions": {
+        "adjustment_method": "none",
+        "roll_event_definition": "selected contract changes between adjacent dates",
+        "price_alignment": "both old and new contracts are priced on the new selection date"
+      },
+      "limitations": [
+        "The script does not infer a roll rule from prices alone.",
+        "Difference/ratio factors describe research-series adjustment; tradable PnL must use contract-level returns and execution costs.",
+        "Expiry, notice-day and liquidity eligibility require additional contract metadata."
+      ],
+      "next_actions": [
+        "Confirm each event against the declared roll rule and decision timestamp.",
+        "Apply the chosen adjustment method to a copy of the series and keep this ledger for reproducibility."
+      ]
+    },
+    "common_IM_CARRY_M": {
+      "passed": true,
+      "roll_count": 58,
+      "rows": 1037,
+      "findings": [],
+      "warnings": [
+        {
+          "id": "unadjusted-roll-gap",
+          "severity": "medium",
+          "impact": "Naively stitched prices contain non-tradable jumps at contract changes."
+        },
+        {
+          "id": "roll-rule-evidence-missing",
+          "severity": "low",
+          "impact": "The selected-contract sequence can be checked structurally, but not proven to follow a volume/open-interest rule."
+        }
+      ],
+      "assumptions": {
+        "adjustment_method": "none",
+        "roll_event_definition": "selected contract changes between adjacent dates",
+        "price_alignment": "both old and new contracts are priced on the new selection date"
+      },
+      "limitations": [
+        "The script does not infer a roll rule from prices alone.",
+        "Difference/ratio factors describe research-series adjustment; tradable PnL must use contract-level returns and execution costs.",
+        "Expiry, notice-day and liquidity eligibility require additional contract metadata."
+      ],
+      "next_actions": [
+        "Confirm each event against the declared roll rule and decision timestamp.",
+        "Apply the chosen adjustment method to a copy of the series and keep this ledger for reproducibility."
+      ]
+    },
+    "common_IM_CARRY_H": {
+      "passed": true,
+      "roll_count": 260,
+      "rows": 1037,
+      "findings": [],
+      "warnings": [
+        {
+          "id": "unadjusted-roll-gap",
+          "severity": "medium",
+          "impact": "Naively stitched prices contain non-tradable jumps at contract changes."
+        },
+        {
+          "id": "roll-rule-evidence-missing",
+          "severity": "low",
+          "impact": "The selected-contract sequence can be checked structurally, but not proven to follow a volume/open-interest rule."
+        }
+      ],
+      "assumptions": {
+        "adjustment_method": "none",
+        "roll_event_definition": "selected contract changes between adjacent dates",
+        "price_alignment": "both old and new contracts are priced on the new selection date"
+      },
+      "limitations": [
+        "The script does not infer a roll rule from prices alone.",
+        "Difference/ratio factors describe research-series adjustment; tradable PnL must use contract-level returns and execution costs.",
+        "Expiry, notice-day and liquidity eligibility require additional contract metadata."
+      ],
+      "next_actions": [
+        "Confirm each event against the declared roll rule and decision timestamp.",
+        "Apply the chosen adjustment method to a copy of the series and keep this ledger for reproducibility."
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+# 本机运行环境
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.matplotlib-cache/
+.ipynb_checkpoints/
+
+# 运行产物（研究者本地目录，不要提交）
+runs/
+demo/
+*.parquet

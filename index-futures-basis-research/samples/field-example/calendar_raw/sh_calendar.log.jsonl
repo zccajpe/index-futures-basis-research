@@ -1,0 +1,5 @@
+{"next_trade_date": "20300103", "pretrade_date": "20291231", "exchange": "SH", "nature_date": 20300101, "is_trade": 0, "window": "20300101_20300131"}
+{"next_trade_date": "20300103", "pretrade_date": "20291231", "exchange": "SH", "nature_date": 20300102, "is_trade": 1, "window": "20300101_20300131"}
+{"next_trade_date": "20300104", "pretrade_date": "20300102", "exchange": "SH", "nature_date": 20300103, "is_trade": 1, "window": "20300101_20300131"}
+{"next_trade_date": "20300107", "pretrade_date": "20300103", "exchange": "SH", "nature_date": 20300104, "is_trade": 0, "window": "20300101_20300131"}
+{"next_trade_date": "20300107", "pretrade_date": "20300103", "exchange": "SH", "nature_date": 20300105, "is_trade": 0, "window": "20300101_20300131"}
