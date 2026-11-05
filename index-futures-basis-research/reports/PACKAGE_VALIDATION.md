@@ -29,8 +29,13 @@
 14_forward_outcomes.py  b79b122f0dffcf75   15_conditional.py          3251c33c0dc76da2
 16_active_rules.py      1e5ec7a28edcaf7a   17_active_comparison.py    06790107334b0832
 18_active_report.py     351d57f7e563f7e0   qs_metrics_adapter.py      6a68f2326030cb30
-qs_paths.py             0270d8fc4f1395b2   run_replay.py              d1430d8989116cd9
+qs_paths.py             0270d8fc4f1395b2   run_replay.py              728b35280ffaefdb
 ```
+
+`run_replay.py` 的哈希与实测那次构建相比只差一处**日志**修正：`run_steps()` 里
+`log.setdefault("stage", step)` 改为 `log["stage"] = step`，这样后续步骤失败时记录的
+`stage` 是真正失败的那一步（旧写法会一直停在第一步）。核算、选约、统计代码不受影响，
+最小检查见 [`validation/stage_fix_check.log`](validation/stage_fix_check.log)。
 
 `06_engine.py` 与原课题实现的 SHA256 完全相同（`7f033fa0d46907ee0c0ab0ed2e8bf747f63b3b16c55ef3fc7f9969fe70a79476`），
 即核算引擎是逐字节复用，而非重写。
@@ -49,6 +54,22 @@ qs_paths.py             0270d8fc4f1395b2   run_replay.py              d1430d8989
 - 输出目录为全新目录，未覆盖任何既有结果；输入目录只读（写入只发生在 `--out`）。
 - 原始记录：[`validation/help.log`](validation/help.log)、[`validation/selftest.log`](validation/selftest.log)、
   [`validation/replay.log`](validation/replay.log)、[`validation/run_log.json`](validation/run_log.json)。
+
+## 2.1 实测包与最终发布包的关系（重要）
+
+上面的三轮命令是在**构建出的 ZIP 解压目录**上跑的。之后按审阅意见只改了文档，以及
+`run_replay.py` 里那一行日志修正；**没有重新跑研究**。两个构建的对应关系：
+
+| 项目 | 实测构建 | 最终发布包 |
+| --- | --- | --- |
+| 研究模块 `06/07/08/13/14/15/16/17/18`、`qs_metrics_adapter.py`、`qs_paths.py` | 12 个文件中除入口外全部 | **逐字节相同**（哈希见第 1 节，`run_replay.py` 除外） |
+| `scripts/run_replay.py` | `d1430d8989116cd9` | `728b35280ffaefdb`（仅 `run_steps()` 的 stage 日志一行） |
+| 文档与证据 | 初版 | 增补/改写了 `docs/package-changes.md`、`references/data-inputs.md`、`SKILL.md`、`README`、本文件及 `validation/` |
+| 在本包上重跑的检查 | 24 组完整回放 + 自检 | `--help` 退出 0、`selftest` 退出 0、stage 日志最小检查通过 |
+
+也就是说：24 组回放与逐日回归的结论来自**研究代码完全相同的构建**；最终包与它相比只有
+文档差异与一行日志差异。这一点是记录，不是推测——两份解压目录的 12 个代码文件已逐一
+比对（`run_replay.py` 之外全部相同），`rules/07_active_rules_frozen.md` 也在两份中完全相同。
 
 ## 3. 结果
 
@@ -74,6 +95,9 @@ qs_paths.py             0270d8fc4f1395b2   run_replay.py              d1430d8989
 | 规则指纹 | `run_log`/`provenance` 的 `rules_sha256` 与随包 `rules/07_active_rules_frozen.md` **一致** |
 | 流水条数 | 决策 **3,804** 条、调仓腿 **6,212** 条（与创作环境既有记录相同） |
 | 换月审计 | 8 组主动路径 `passed=true`；两类告警**原样保留**：`unadjusted-roll-gap`、`roll-rule-evidence-missing` |
+
+日志修正的最小检查：[`validation/stage_fix_check.log`](validation/stage_fix_check.log)——只替换了两个步骤函数，
+不含研究代码；结果显示失败时 `stage = "replay"`，旧写法会是 `"panels"`。
 
 机器证据：[`validation/comparison.csv`](validation/comparison.csv)（本次运行自己的 24 行 × 62 列）、
 [`validation/checks.json`](validation/checks.json)、[`validation/provenance.json`](validation/provenance.json)、

@@ -1,0 +1,10 @@
+=== step panels ===
+=== step panels OK (0.0s) ===
+=== step replay ===
+PASS  failed_step_recorded
+PASS  completed_steps_kept
+PASS  error_propagated
+PASS  old_form_would_be_wrong
+PASS  new_form_differs_from_old
+log stage = 'replay'; old-setdefault stage = 'panels'
+STAGE FIX CHECK: PASSED

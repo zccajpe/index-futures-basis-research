@@ -191,7 +191,7 @@ def step_figures(log: dict) -> None:
 
 def run_steps(steps, log: dict) -> None:
     for step in steps:
-        log.setdefault("stage", step)
+        log["stage"] = step          # 记当前步骤：失败时 stage 必须是真正失败的那一步
         print(f"=== step {step} ===", flush=True)
         started = time.time()
         {"selftest": step_selftest, "panels": step_panels,

@@ -15,6 +15,11 @@
 **价格指数**的超额仍为正；两条主动规则在本样本上仍没有证明能增加扣费后优势。这套包
 不承诺主动管理有效，也不证明未来收益。
 
+**主评价只有一条**：年化超额 = 账户年化收益（CAGR）− 对应**价格指数** CAGR，年化 252 个
+交易日、每净交易腿 2bp、现金利息 0。回撤、修复时间、费用与换手只作风险与成本描述，
+不另立一套评价体系；`rules/` 里那份历史冻结规则原文中出现的"相对财富 NAV"是当时的
+描述性记录，本版不以它作主评价。
+
 ## 目录
 
 ```
@@ -37,7 +42,7 @@ index-futures-basis-research/
 │   ├── data-inputs.md          四个输入文件的字段、单位、来源
 │   ├── platform-components.md  三个必需组件与解释边界
 │   └── ic-im-example.md        IC/IM 案例的命令、产物与验收
-├── docs/package-changes.md     发布版逐行改动清单（与原课题实现的 diff）
+├── docs/package-changes.md     发布版逐文件改动说明（06 逐字节相同）
 ├── reports/
 │   ├── RESEARCH_REPORT.md            研究报告（样本截至 2026-11-04）
 │   ├── PACKAGE_VALIDATION.md         本包从 ZIP 解压目录的实测记录
@@ -89,9 +94,37 @@ python3 scripts/run_replay.py all \
 
 ## 在 QuantStudio 里安装调用
 
-完整步骤见仓库根目录 README 的“安装与调用”：把本目录解压到工作区 `quantskills-drafts/` 下，
-用原生“技能创作”读取该目录并 `prepare`/确认注册，再在**新的原生 Skill 会话**加载调用。
-不存在“导入 ZIP”按钮，也没有线上安装命令。
+本目录就是完整技能包（`SKILL.md` 在本目录根下），可以单独安装，不依赖仓库里的其他文件。
+下载地址：<https://github.com/zccajpe/index-futures-basis-research/releases/tag/v1.0.0>
+（附件 `index-futures-basis-research-v1.0.0.zip`）。当前 QuantStudio 只支持本地技能创作流程，
+**没有“导入 ZIP”按钮**，也没有线上安装命令：
+
+1. 在**你自己的 QuantSkills 工作区根目录**执行（把 ZIP 路径换成你实际下载的位置）：
+
+   ```sh
+   cd <你的 QuantSkills 工作区>          # 例：/Users/you/Documents/QuantSkills
+   mkdir -p quantskills-drafts/skill
+   unzip -q ~/Downloads/index-futures-basis-research-v1.0.0.zip -d quantskills-drafts/skill/
+   mv quantskills-drafts/skill/index-futures-basis-research \
+      quantskills-drafts/skill/index-futures-basis-research-1.0.0
+   ```
+
+   如果你已经是解压后的目录，把 `index-futures-basis-research` 整个目录复制到
+   `<你的 QuantSkills 工作区>/quantskills-drafts/skill/index-futures-basis-research-1.0.0` 即可。
+
+2. 打开 **技能 → AI 创建技能**，在创作会话里粘贴：
+
+   > 请按原样导入当前工作区的 `quantskills-drafts/skill/index-futures-basis-research-1.0.0`。该目录已经包含完整的 `SKILL.md`、研究脚本、冻结规则与报告。直接用 `quantskills_asset_draft` 对此目录执行 `prepare`，展示确认卡。
+
+3. 核对卡片上的技术ID `skill-index-futures-basis-research`，点 **生成并开始**（只点了
+   **确认生成** 的话，从 **技能 → 我的创建** 找到它开始对话）。
+
+4. 在**新建的技能会话**里调用，例如：
+
+   > 用当前会话已安装的 `index-futures-basis-research`，在我自备的输入目录 `data/ic-im-inputs` 上复跑冻结的 24 组方案。用工作区的 Python 运行本技能的 `scripts/run_replay.py all`，输出写到新目录 `runs/2026-11-04`，组件根目录是 `<QuantStudio home>/quantskills/versions`。告诉我 24 组是否齐全、`checks.json` 里有没有 `false`、参照回归误差多少、换月审计的告警是什么。不要改规则、不要取新数据、不要下单。
+
+安装的单位是本目录（`index-futures-basis-research/`）整个目录；安装时要准备好第 2 节的
+Python 依赖与第 3 节的三个外部组件，否则回放会在组件解析处明确报错并停止。
 
 ## 已验证到什么程度
 

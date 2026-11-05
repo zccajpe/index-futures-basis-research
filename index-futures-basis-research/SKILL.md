@@ -9,7 +9,7 @@ metadata:
 
 技术ID：`skill-index-futures-basis-research`。版本 1.0.0（完整研究包：声明、引用、研究代码、说明与报告齐全；不含行情数据与第三方组件源码）。
 
-这是研究任务的调用说明与可执行入口，不是新的回测引擎、统计框架、策略库、数据平台或查看器。财务计算与策略定义沿用原课题实现，本版只为发布做了输入目录、输出目录与组件绑定的路径适配（逐行差异见 `docs/package-changes.md`）。
+这是研究任务的调用说明与可执行入口，不是新的回测引擎、统计框架、策略库、数据平台或查看器。财务计算与策略定义沿用原课题实现，本版只为发布做了输入目录、输出目录与组件绑定的路径适配（逐文件说明见 `docs/package-changes.md`）。
 
 ## 触发条件与适用场景
 
@@ -34,24 +34,55 @@ metadata:
 
 ## 可直接调用的步骤
 
-所有命令都从**本包根目录**执行（`<pkg>` 指解压后的 `index-futures-basis-research/`）：
+所有命令都从**本包根目录**执行（`<pkg>` 指解压后的 `index-futures-basis-research/`）。
+
+### 首选：一条命令跑完（已实测）
 
 ```bash
-python3 scripts/run_replay.py --help                     # 帮助；不构成验证
-python3 scripts/run_replay.py selftest --inputs <输入目录> --out <全新目录> \
-    --components <versions>                              # 核算/选约/指标适配自检（只需 SH 日历）
-python3 scripts/run_replay.py panels   --inputs <输入目录> --out <全新目录>
-python3 scripts/run_replay.py replay   --inputs <输入目录> --out <全新目录> \
-    --components <versions> [--results <参照目录>]
-python3 scripts/run_replay.py figures  --out <同一目录> --allow-existing
-python3 scripts/run_replay.py all      --inputs <输入目录> --out <全新目录> \
-    --components <versions> [--results <参照目录>]
+python3 scripts/run_replay.py all \
+  --inputs <输入目录> --out <全新目录> \
+  --components <QuantStudio home>/quantskills/versions \
+  [--results <参照目录>]
 ```
 
-- `--out` 默认必须是全新目录；要追加步骤才加 `--allow-existing`。
-- `all` = `panels → replay → figures`，一次跑完 24 组回放与两张静态图。
-- 每次运行都会写 `run_log.json`：包版本、解释器、解析出的组件版本、各步骤状态、以及实际导入的研究模块路径。入口会校验所有研究模块都来自本包 `scripts/`，出现外部同名模块即失败。
-- `--results DIR` 是可选参照目录（每个 `{window}_{product}_{scheme}/daily.csv`）。提供时逐日比对权益（容差 1e-6，日期必须完全一致）；未提供时该项在 `checks.json` 里记为 `not_run`，不算通过。
+`all` = `panels → replay → figures`：重建观察面板、跑 24 组固定回放、出两张静态图，全部写进
+同一个 `--out` 目录。
+
+### 分步执行：必须共用同一个 `--out`
+
+分步只在需要单独重跑某一段时使用。`replay` 依赖 `panels` 刚生成的
+`basis_panel.parquet` 与 `forward_outcomes.parquet`，所以三步必须指向**同一个**输出目录；
+因为目录已非空，第二步和第三步要显式加 `--allow-existing`（默认拒绝写入非空目录）。
+
+```bash
+python3 scripts/run_replay.py panels --inputs <输入目录> --out <同一目录>
+python3 scripts/run_replay.py replay --inputs <输入目录> --out <同一目录> \
+    --allow-existing --components <QuantStudio home>/quantskills/versions [--results <参照目录>]
+python3 scripts/run_replay.py figures --out <同一目录> --allow-existing
+```
+
+### 离线自检（不需要行情价格，只要 SH 交易日历）
+
+```bash
+python3 scripts/run_replay.py selftest \
+  --inputs <含 calendar_raw/sh_calendar.log.jsonl 的目录> --out <全新目录> \
+  --components <QuantStudio home>/quantskills/versions
+```
+
+### 查看参数
+
+```bash
+python3 scripts/run_replay.py --help
+python3 scripts/run_replay.py all --help      # 每个子命令都有同名的 --inputs/--out/--components 等参数
+```
+
+- `--out` 默认必须是全新目录；要在同一次运行里追加步骤才加 `--allow-existing`。
+- 每次运行都会写 `run_log.json`：包版本、解释器、解析出的组件版本、各步骤状态（失败时记录
+  真正失败的那一步）、以及实际导入的研究模块路径。入口会校验所有研究模块都来自本包
+  `scripts/`，出现外部同名模块即失败。
+- `--results DIR` 是可选参照目录（每个 `{window}_{product}_{scheme}/daily.csv`）。提供时逐日
+  比对权益（容差 1e-6，日期必须完全一致）；未提供时该项在 `checks.json` 里记为 `not_run`，
+  不算通过。
 
 ## 研究方法：确定问题与数据观察
 
@@ -82,7 +113,10 @@ python3 scripts/run_replay.py all      --inputs <输入目录> --out <全新目�
 
 在看本轮规则收益前记录定义与试验范围；保留亏损、无优势、未成熟和无法评价的结果，不循环调参到盈利。已看过的样本只能称探索性历史比较，不将后段重新称为未触碰样本外。
 
-主动规则与适用的近月、近季、远季、分批方案共用核算和基准时钟，同时报告相对指数超额及相对被动方案增减。本包内置的六方案（`NEAR/NEARQ/FARQ/STAG/CARRY_M/CARRY_H`）是冻结案例，复跑不新增试验。
+主动规则与适用的近月、近季、远季、分批方案共用核算和基准时钟。主评价用一条口径：
+年化超额 = 账户 CAGR − 对应价格指数 CAGR（252 交易日、每净交易腿 2bp、现金利息 0）；
+另附相对被动方案（同口径 `NEARQ`）的增减作对照，回撤/费用/换手只作风险与成本描述，
+不另立评价体系。本包内置的六方案（`NEAR/NEARQ/FARQ/STAG/CARRY_M/CARRY_H`）是冻结案例，复跑不新增试验。
 
 ## 核算与必要验证
 

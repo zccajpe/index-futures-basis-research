@@ -4,7 +4,7 @@
 
 **公开交付版 1.0.0**（2026-11-05）· 技能名 `index-futures-basis-research`，技术ID `skill-index-futures-basis-research`。包版本写在技能声明的 `metadata.version`；要复用完全相同的文件，请记录 `git rev-parse HEAD` 的提交号。QuantStudio 会给实际安装的文件另分配本机版本 ID。
 
-**完整包内容**：技能声明、引用、**本课题全部研究代码**、冻结规则原文、研究报告、机器证据与静态图。**包内不含行情数据、第三方组件源码、凭据或平台配置**；复跑需要使用者自备合法可用的逐日合约面板与指数日线。
+**完整包内容**：技能声明、引用、**复跑所需的研究代码**、冻结规则原文、研究报告、机器证据与静态图。**包内不含行情数据、第三方组件源码、凭据或平台配置**；复跑需要使用者自备合法可用的逐日合约面板与指数日线。
 
 ## 结论先说清楚
 
@@ -58,21 +58,33 @@ cd index-futures-basis-research
 
 当前 QuantStudio 支持的本地技能创作流程如下（不存在“导入 ZIP”按钮，也没有线上安装命令）：
 
-1. 把完整技能目录放到当前工作区的 `quantskills-drafts/` 下。用 Release 的 ZIP：
+1. 把完整技能目录放进**你自己的 QuantSkills 工作区**的 `quantskills-drafts/skill/` 下。
+   先进入工作区根目录（就是 QuantStudio 当前打开的那个目录），再解压：
 
    ```sh
-   mkdir -p ../quantskills-drafts/skill
-   unzip -q index-futures-basis-research-v1.0.0.zip -d ../quantskills-drafts/skill/
-   mv ../quantskills-drafts/skill/index-futures-basis-research \
-      ../quantskills-drafts/skill/index-futures-basis-research-1.0.0
+   cd <你的 QuantSkills 工作区>          # 例：/Users/you/Documents/QuantSkills
+   mkdir -p quantskills-drafts/skill
+
+   # ZIP 的完整路径：Release 下载后通常在你的“下载”目录
+   unzip -q ~/Downloads/index-futures-basis-research-v1.0.0.zip -d quantskills-drafts/skill/
+
+   # 解压出的是 index-futures-basis-research/，按版本号改名，方便以后并存多个版本
+   mv quantskills-drafts/skill/index-futures-basis-research \
+      quantskills-drafts/skill/index-futures-basis-research-1.0.0
    ```
 
-   或从克隆的仓库里复制（只复制版本控制中的文件）：
+   也可以改用克隆仓库的方式（同样在工作区根目录执行）：
 
    ```sh
-   mkdir -p ../quantskills-drafts/skill/index-futures-basis-research-1.0.0
-   git archive HEAD:index-futures-basis-research | tar -x -C ../quantskills-drafts/skill/index-futures-basis-research-1.0.0
+   cd <你的 QuantSkills 工作区>
+   git clone https://github.com/zccajpe/index-futures-basis-research.git basis-repo
+   mkdir -p quantskills-drafts/skill
+   cp -R basis-repo/index-futures-basis-research \
+         quantskills-drafts/skill/index-futures-basis-research-1.0.0
    ```
+
+   解压/复制完应当能在 `quantskills-drafts/skill/index-futures-basis-research-1.0.0/SKILL.md`
+   直接看到技能声明。
 
 2. 打开 **技能 → AI 创建技能**，在创作会话里粘贴：
 
@@ -126,7 +138,7 @@ index-futures-basis-research/       完整技能包（= Release ZIP 解压出来
 ├── scripts/                        研究代码与唯一入口 run_replay.py
 ├── rules/07_active_rules_frozen.md 冻结规则原文
 ├── references/                     数据输入、组件绑定、IC/IM 案例
-├── docs/package-changes.md         发布版逐行改动清单（与原课题实现的 diff）
+├── docs/package-changes.md         发布版逐文件改动说明（06 逐字节相同）
 ├── reports/                        研究报告、实测记录、验证记录、证据 CSV、静态图
 └── samples/field-example/          合成字段示例（非实证）
 README.md                           本文件
